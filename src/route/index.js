@@ -8,7 +8,7 @@ import GoodsDetailComponent from '../component/goods/Detail.vue';
 export default new VueRouter({
     routes: [
         { path: '/', redirect:'/goods' },
-        { path: '/goods', component: GoodsComponent},
-        { path: '/goods/detail/:id', component: GoodsDetailComponent}, 
+        { name:'g', path: '/goods', component: GoodsComponent},
+        { name:'gd', path: '/goods/detail/:id', component: GoodsDetailComponent}, 
     ]
 });
