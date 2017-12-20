@@ -36,7 +36,7 @@ module.exports = {
             },
             // 静态资源模块
             {
-                test:/\.(img|png|jpg|jpeg|gif|mp3|mp4|avi|svg|woff|ttf)$/,
+                test:/\.(img|png|jpg|jpeg|gif|mp3|mp4|avi|svg|woff|ttf|eot)$/,
                 use:[
                     {
                         loader:'url-loader',
