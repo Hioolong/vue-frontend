@@ -17,7 +17,7 @@
                     <ul class="img-list">
 
                         <li v-for="childitem in item.datas" :key="childitem.id">
-                            <a href="/goods/show-91.html">
+                            <router-link :to="{name:'gd',params:{id:childitem.artID}}">
                                 <div class="img-box">
                                     <img :src="childitem.img_url">
                                 </div>
@@ -32,7 +32,7 @@
                                         </span>
                                     </p>
                                 </div>
-                            </a>
+                            </router-link>
                         </li>
 
                     </ul>

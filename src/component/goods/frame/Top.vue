@@ -59,7 +59,7 @@
                                 <img :src="item.img_url">
                             </div>
                             <div class="txt-box">
-                                <a href="/goods/show-98.html">{{ item.title }}</a>
+                                <router-link :to="{name:'gd',params:{id:item.id}}">{{ item.title }}</router-link>
                                 <span>{{ item.add_time | date}}</span>
                             </div>
                         </li>
@@ -90,7 +90,7 @@ export default {
         // 获取商品页面顶部数据
         getGoodsTop(){
             this.$http.get(this.$api.goodsTop).then(res => {
-                // console.log(res.data);
+                console.log(res.data);
                 this.topData.catelist = res.data.message.catelist;
                 this.topData.sliderlist = res.data.message.sliderlist;
                 this.topData.toplist = res.data.message.toplist;
